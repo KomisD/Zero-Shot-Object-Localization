@@ -1,6 +1,6 @@
 # Zero-Shot Object Localization with SAM + CLIP
 
-Locate any object in an image using a plain text description — no training, no labels, no fine-tuning required.
+Locate any object in an image using a plain text description; no training, no labels, no fine-tuning required.
 
 Given a prompt like *"Pick the screwdriver"*, the pipeline segments the image into candidate regions using **SAM**, ranks them by semantic similarity using **CLIP**, and returns a bounding box around the best match.
 
@@ -45,7 +45,7 @@ Image + Text Prompt
 1. **SAM** generates up to 100 class-agnostic region proposals via a grid of prompt points
 2. Each region is cropped from the original image
 3. **OpenCLIP** encodes both the crops and the text prompt into a shared embedding space
-4. Regions are ranked by cosine similarity — the top-k matches are returned with bounding boxes
+4. Regions are ranked by cosine similarity, the top-k matches are returned with bounding boxes
 
 ---
 
